@@ -30,7 +30,7 @@ const Navbar = () => {
       </div>
       <nav className="fixed z-50 flex w-full items-center justify-between px-5 py-4 lg:px-8 xl:px-[8%]">
         <a href="#top">
-          <h1 className="mr-14 cursor-pointer text-lg font-bold text-slate-700 md:text-2xl">
+          <h1 className="mr-14 cursor-pointer font-salsa text-lg font-bold text-slate-700 md:text-2xl">
             Blessing<span className="text-slate-400">Ubiomor</span>{" "}
           </h1>
         </a>
@@ -59,8 +59,9 @@ const Navbar = () => {
           </button>
 
           <a
-            href="#contact"
-            className="font-Ovo ml-4 hidden items-center gap-3 rounded-full border border-gray-500 px-10 py-2.5 lg:flex">
+            href="/Blessing_Ubiomor_Resume.pdf"
+            download
+            className="ml-4 hidden items-center gap-3 rounded-full border border-gray-500 px-10 py-2.5 font-Ovo lg:flex">
             My resume{" "}
             <Image
               src={assets.download_icon}
