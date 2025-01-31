@@ -9,7 +9,7 @@ const Hero = () => {
           <Image
             src={assets.profile_img}
             alt="profile_img"
-            className="w-28 rounded-full"
+            className="w-28 rounded-full shadow-2xl shadow-black"
           />
         </div>
 
