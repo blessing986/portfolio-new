@@ -2,9 +2,11 @@
 
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
+  const [isScroll, setIsScroll] = useState(false);
+
   const sideMenuRef = useRef<HTMLUListElement>(null);
 
   const openMenu = () => {
@@ -19,6 +21,16 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (scrollY > 50) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    });
+  }, []);
+
   return (
     <>
       <div className="fixed right-0 top-0 -z-10 w-[80%] translate-y-[-80%]">
@@ -28,14 +40,16 @@ const Navbar = () => {
           className="w-full"
         />
       </div>
-      <nav className="fixed z-50 flex w-full items-center justify-between px-5 py-4 lg:px-8 xl:px-[8%]">
+      <nav
+        className={`fixed z-50 flex w-full items-center justify-between px-5 py-4 lg:px-8 xl:px-[8%] ${isScroll ? "shodow-sm bg-white bg-opacity-50 backdrop-blur-lg" : ""}`}>
         <a href="#top">
           <h1 className="mr-14 cursor-pointer font-salsa text-lg font-bold text-slate-700 md:text-2xl">
             Blessing<span className="text-slate-400">Ubiomor</span>{" "}
           </h1>
         </a>
 
-        <ul className="hidden items-center gap-6 rounded-full bg-white bg-opacity-50 px-12 py-3 shadow-sm md:flex lg:gap-20">
+        <ul
+          className={`hidden items-center gap-6 rounded-full px-12 py-3 md:flex lg:gap-20 ${isScroll ? "" : "bg-white bg-opacity-50 shadow-sm"}`}>
           <li>
             <a href="#top" className="font-Ovo">
               Home
