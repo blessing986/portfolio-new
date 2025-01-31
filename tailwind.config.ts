@@ -9,13 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        lightHover: "#fcf4ff",
       },
       fontFamily: {
         Outfit: ["Outfit", "sans-serif"],
         Ovo: ["Ovo", "serif"],
         salsa: ["Salsa"],
+      },
+      boxShadow: {
+        black: "4px 4px 0 #000",
       },
     },
   },

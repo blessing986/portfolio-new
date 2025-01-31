@@ -28,9 +28,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${outfit.className} ${ovo.className} ${salsa.className} antialiased leading-8 overflow-x-hidden`}>
+        className={`${outfit.className} ${ovo.className} ${salsa.className} overflow-x-hidden leading-8 antialiased`}>
         {children}
       </body>
     </html>
