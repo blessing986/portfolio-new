@@ -17,6 +17,8 @@ import react from "./react.png";
 import nextjs from "./nextjs.png";
 import github from "./github.png";
 import tailwindcss from "./tailwindcss.png";
+import send_icon from "./send-icon.png";
+import right_arrow_bold from "./right-arrow-bold.png";
 
 export const assets = {
   header_bg_color,
@@ -38,4 +40,6 @@ export const assets = {
   nextjs,
   github,
   tailwindcss,
+  send_icon,
+  right_arrow_bold,
 };
