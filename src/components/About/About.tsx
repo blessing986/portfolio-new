@@ -27,15 +27,14 @@ const About = () => {
               help your next project. I enjoy creating things that live on the
               internet. I craft premium digital work for web with creative
               agencies and global brands alike – putting passion, pride and lots
-              of grit into everything I do. Frameworks and tools used includes:
-              React Js, Next Js, Git/GitHub.
+              of grit into everything I do.
             </p>
 
             <div className="grid max-w-2xl grid-cols-1 gap-6 md:grid-cols-3">
               <CardList
                 icon={assets.code_icon}
                 title="Languages"
-                description="HTML, CSS, Tailwind CSS, JavaScript, TypeScript"
+                description="HTML, CSS, JavaScript, TypeScript"
               />
               <CardList
                 icon={assets.edu_icon}
@@ -54,9 +53,9 @@ const About = () => {
             <div className="flex items-center gap-3 sm:gap-5">
               <ToolsList tool={assets.vscode} />
               <ToolsList tool={assets.git} />
+              <ToolsList tool={assets.github} />
               <ToolsList tool={assets.react} />
               <ToolsList tool={assets.nextjs} />
-              <ToolsList tool={assets.github} />
               <ToolsList tool={assets.tailwindcss} />
             </div>
           </div>
