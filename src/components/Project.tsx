@@ -5,12 +5,6 @@ import Link from "next/link";
 const Project = () => {
   const projecctData = [
     {
-      title: "Decove",
-      description: "Web Design",
-      bgImage: "/decove.PNG",
-      url: "https://decove.com",
-    },
-    {
       title: "Blink",
       description: "Web Design",
       bgImage: "/blink.PNG",
@@ -21,6 +15,12 @@ const Project = () => {
       description: "Web Design",
       bgImage: "/blogzine.PNG",
       url: "https://blogzine-blogzine.netlify.app",
+    },
+    {
+      title: "Decove",
+      description: "Web Design",
+      bgImage: "/decove.PNG",
+      url: "https://decove.com",
     },
     {
       title: "Project Management",
