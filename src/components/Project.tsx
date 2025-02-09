@@ -1,6 +1,7 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 const Project = () => {
   const projecctData = [
@@ -50,22 +51,52 @@ const Project = () => {
 
   return (
     <>
-      <div id="work" className="scroll-mt-16 px-[12%] py-10 lg:scroll-mt-20">
-        <h4 className="mb-2 text-center font-Ovo text-lg">My portfolio</h4>
-        <h2 className="text-center font-Ovo text-5xl">My latest work</h2>
-        <p className="mx-auto mb-12 mt-5 max-w-2xl text-center font-Ovo">
+      <motion.div
+        id="work"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="scroll-mt-16 px-[12%] py-10 lg:scroll-mt-20">
+        <motion.h4
+          initial={{ y: -20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="mb-2 text-center font-Ovo text-lg">
+          My portfolio
+        </motion.h4>
+
+        <motion.h2
+          initial={{ y: -20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="text-center font-Ovo text-5xl">
+          My latest work
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.7, duration: 0.5 }}
+          className="mx-auto mb-12 mt-5 max-w-2xl text-center font-Ovo">
           Welcome to my web development portfolio! Explore a collection of
           projects showcasing my expertise in front-end development.
-        </p>
+        </motion.p>
 
-        <div className="my-10 grid w-full grid-cols-auto gap-5 py-10 dark:text-black">
+        <motion.div
+           initial={{ opacity: 0 }}
+           whileInView={{ opacity: 1 }}
+           transition={{ delay: 0.9, duration: 0.6 }}
+          className="my-10 grid w-full grid-cols-auto gap-5 py-10 dark:text-black">
           {projecctData.map((project, index) => (
             <Link
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
               key={index}>
-              <div className="group h-[250px] cursor-pointer rounded-2xl bg-slate-700">
+              <motion.div 
+              whileHover={{scale:1.05}} 
+              transition={{duration:0.3}} 
+              className="group h-[250px] cursor-pointer rounded-2xl bg-slate-700">
                 <Image
                   src={project.bgImage}
                   alt={project.title}
@@ -90,11 +121,11 @@ const Project = () => {
                     />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </Link>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </>
   );
 };
