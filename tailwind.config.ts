@@ -10,6 +10,8 @@ export default {
     extend: {
       colors: {
         lightHover: "#fcf4ff",
+        darkTheme: "#11001F",
+        darkHover:"#2a004a"
       },
       fontFamily: {
         Outfit: ["Outfit", "sans-serif"],
@@ -24,5 +26,6 @@ export default {
       },
     },
   },
+  darkMode: "selector",
   plugins: [],
 } satisfies Config;

@@ -20,6 +20,11 @@ import tailwindcss from "./tailwindcss.png";
 import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import mail_icon from "./mail_icon.png";
+import sun_icon from "./sun_icon.png";
+import menu_white from "./menu-white.png";
+import close_white from "./close-white.png";
+import github_dark from "./github-dark.png";
+import mail_icon_dark from "./mail_icon_dark.png";
 
 export const assets = {
   header_bg_color,
@@ -44,4 +49,9 @@ export const assets = {
   send_icon,
   right_arrow_bold,
   mail_icon,
+  sun_icon,
+  menu_white,
+  close_white,
+  github_dark,
+  mail_icon_dark,
 };

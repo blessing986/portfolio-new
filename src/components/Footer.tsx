@@ -2,7 +2,11 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 
-const Footer = () => {
+interface FooterProps {
+  isDarkMode: boolean;
+}
+
+const Footer = ({ isDarkMode }: FooterProps) => {
   const currentDate = new Date().getFullYear();
 
   return (
@@ -13,7 +17,11 @@ const Footer = () => {
         </h1>
 
         <div className="mx-auto flex w-max items-center gap-2">
-          <Image src={assets.mail_icon} alt="mail_icon" className="w-6" />
+          <Image
+            src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon}
+            alt="mail_icon"
+            className="w-6"
+          />
           <a href="mailto:dev.blessingubiomor@gmail.com">
             dev.blessingubiomor@gmail.com{" "}
           </a>

@@ -3,7 +3,11 @@ import Image from "next/image";
 import CardList from "./CardList";
 import ToolsList from "./ToolsList";
 
-const About = () => {
+interface AboutProps {
+  isDarkMode: boolean;
+}
+
+const About = ({ isDarkMode }: AboutProps) => {
   return (
     <>
       <div
@@ -33,27 +37,37 @@ const About = () => {
             <div className="grid max-w-2xl grid-cols-1 gap-6 md:grid-cols-3">
               <CardList
                 icon={assets.code_icon}
+                iconDark={assets.code_icon_dark}
                 title="Languages"
                 description="HTML, CSS, JavaScript, TypeScript"
+                isDarkMode={isDarkMode}
               />
               <CardList
                 icon={assets.edu_icon}
+                iconDark={assets.edu_icon_dark}
                 title="Education"
                 description="B.Sc in Computer Science"
+                isDarkMode={isDarkMode}
               />
               <CardList
                 icon={assets.project_icon}
+                iconDark={assets.project_icon_dark}
                 title="Projects"
                 description="Built more than 5 projects"
+                isDarkMode={isDarkMode}
               />
             </div>
 
-            <h4 className="my-6 text-gray-700 font-Ovo">Tools and Framework I use</h4>
+            <h4 className="my-6 font-Ovo text-gray-700 dark:text-white/80">
+              Tools and Framework I use
+            </h4>
 
             <div className="flex items-center gap-3 sm:gap-5">
               <ToolsList tool={assets.vscode} />
               <ToolsList tool={assets.git} />
-              <ToolsList tool={assets.github} />
+              <ToolsList
+                tool={isDarkMode ? assets.github_dark : assets.github}
+              />
               <ToolsList tool={assets.react} />
               <ToolsList tool={assets.nextjs} />
               <ToolsList tool={assets.tailwindcss} />

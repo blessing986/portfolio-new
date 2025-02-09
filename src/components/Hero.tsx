@@ -4,7 +4,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <>
-      <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+      <div className="mx-auto flex h-screen w-11/12 max-w-3xl flex-col items-center justify-center gap-4 text-center">
         <div>
           <Image
             src={assets.profile_img}
@@ -21,20 +21,20 @@ const Hero = () => {
           Frontend Developer based in Nigeria.
         </h1>
         <p className="mx-auto max-w-2xl font-Ovo">
-          I&apos;m a creative frontend developer from Abuja, Nigeria. Welcome
-          to my own space on the internet.
+          I&apos;m a creative frontend developer from Abuja, Nigeria. Welcome to
+          my own space on the internet.
         </p>
 
         <div className="mt-4 flex">
           <a
             href="/Blessing_Ubiomor_Resume.pdf"
             download
-            className="flex items-center gap-2 rounded-full border border-white px-10 py-3 bg-black text-white">
+            className="flex items-center gap-2 rounded-full border border-white bg-black px-10 py-3 text-white dark:bg-white dark:text-black">
             My resume{" "}
             <Image
               src={assets.download_icon}
               alt="download_icon"
-              className="w-4 bg-white p-[2px]"
+              className="w-4 bg-white p-[2px] dark:bg-transparent"
             />{" "}
           </a>
         </div>

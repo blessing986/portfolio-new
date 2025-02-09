@@ -58,7 +58,7 @@ const Project = () => {
           projects showcasing my expertise in front-end development.
         </p>
 
-        <div className="my-10 grid w-full grid-cols-auto gap-5 py-10">
+        <div className="my-10 grid w-full grid-cols-auto gap-5 py-10 dark:text-black">
           {projecctData.map((project, index) => (
             <Link
               href={project.url}
