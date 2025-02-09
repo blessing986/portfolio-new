@@ -19,6 +19,7 @@ import github from "./github.png";
 import tailwindcss from "./tailwindcss.png";
 import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
+import mail_icon from "./mail_icon.png";
 
 export const assets = {
   header_bg_color,
@@ -42,4 +43,5 @@ export const assets = {
   tailwindcss,
   send_icon,
   right_arrow_bold,
+  mail_icon,
 };
