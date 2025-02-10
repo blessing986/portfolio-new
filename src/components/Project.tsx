@@ -9,7 +9,7 @@ const Project = () => {
       title: "Blink",
       description: "Web Design",
       bgImage: "/blink.PNG",
-      url: "https://getblink.africa",
+      url: "https://useblink.co",
     },
     {
       title: "Blogzine",
@@ -83,9 +83,9 @@ const Project = () => {
         </motion.p>
 
         <motion.div
-           initial={{ opacity: 0 }}
-           whileInView={{ opacity: 1 }}
-           transition={{ delay: 0.9, duration: 0.6 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.9, duration: 0.6 }}
           className="my-10 grid w-full grid-cols-auto gap-5 py-10 dark:text-black">
           {projecctData.map((project, index) => (
             <Link
@@ -93,10 +93,10 @@ const Project = () => {
               target="_blank"
               rel="noopener noreferrer"
               key={index}>
-              <motion.div 
-              whileHover={{scale:1.05}} 
-              transition={{duration:0.3}} 
-              className="group h-[250px] cursor-pointer rounded-2xl bg-slate-700">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+                className="group h-[250px] cursor-pointer rounded-2xl bg-slate-700">
                 <Image
                   src={project.bgImage}
                   alt={project.title}
@@ -107,7 +107,9 @@ const Project = () => {
 
                 <div className="mx-2 mt-6 flex items-center justify-between rounded-lg bg-gray-200 p-2 duration-500 group-hover:-translate-y-1">
                   <div>
-                    <h2 className="font-semibold">{project.title}</h2>
+                    <h2 className="h-[30px] font-semibold leading-[14px]">
+                      {project.title}
+                    </h2>
                     <p className="text-sm text-gray-700">
                       {project.description}
                     </p>
